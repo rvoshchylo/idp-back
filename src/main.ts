@@ -12,7 +12,7 @@ async function bootstrap() {
   });
   app.useGlobalFilters(new AllExceptionsFilter());
   app.enableCors({
-    origin: 'https://idp-front-eight.vercel.app',
+    origin: ['https://idp-front-eight.vercel.app', 'http://localhost:3003'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     allowedHeaders: 'Content-Type, Authorization',
